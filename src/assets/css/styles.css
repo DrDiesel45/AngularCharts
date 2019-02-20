@@ -1,0 +1,43 @@
+.line {
+    fill: none;
+    stroke: #000;
+    stroke-width: 1.5px;
+}
+
+.overlay {
+    fill: none;
+    pointer-events: all;
+}
+
+.focus circle {
+    fill: #000;
+}
+
+.focus text {
+    font-size: 14px;
+}
+
+.tooltip {
+    fill: white;
+    stroke: #000;
+}
+
+#chart {
+    display: block;
+    position: absolute;
+    left: 0px;
+    right: 60px;
+    top: 0px;
+    bottom: 60px;
+}
+#chart2 {
+    display: block;
+    position: absolute;
+    left: 0px;
+    right: 60px;
+    top: 0px;
+    bottom: 60px;
+}
+.mat-grid-tile {
+    background: lightblue;
+}

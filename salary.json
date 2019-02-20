@@ -1,0 +1,64 @@
+{
+  "results": [
+    {
+      "month": "01",
+      "monthName": "January",
+      "value": "20"
+    },
+    {
+      "month": "02",
+      "monthName": "February",
+      "value": "26"
+    },
+    {
+      "month": "03",
+      "monthName": "March",
+      "value": "30"
+    },
+    {
+      "month": "04",
+      "monthName": "April",
+      "value": "27"
+    },
+    {
+      "month": "05",
+      "monthName": "May",
+      "value": "35"
+    },
+    {
+      "month": "06",
+      "monthName": "June",
+      "value": "32"
+    },
+    {
+      "month": "07",
+      "monthName": "July",
+      "value": "45"
+    },
+    {
+      "month": "08",
+      "monthName": "August",
+      "value": "43"
+    },
+    {
+      "month": "09",
+      "monthName": "September",
+      "value": "47"
+    },
+    {
+      "month": "10",
+      "monthName": "October",
+      "value": "45"
+    },
+    {
+      "month": "11",
+      "monthName": "November",
+      "value": "54"
+    },
+    {
+      "month": "12",
+      "monthName": "December",
+      "value": "56"
+    }
+  ]
+}

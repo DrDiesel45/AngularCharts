@@ -1,0 +1,46 @@
+{
+  //Настраиваем компилятор typescript
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es2015",
+    "declaration": false,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "noImplicitAny": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "skipLibCheck": true,
+    "lib": ["es6", "dom"],
+    "outDir": "./dist/",
+    "typeRoots": [
+      "./node_modules/@types/"
+    ]
+  },
+  "compileOnSave": false,
+  "buildOnSave": false,
+  //наше приложение будет лежать в папке ./src
+  "include": [
+    "./src/**/*"
+  ],
+  //запрещаем typescript обращать внимание на:
+  "exclude": [
+    "node_modules/*",
+    "dist/*",
+    "dist-serve/*",
+    "node/*",
+    "**/*.spec.ts"
+  ],
+  //настраиваем loader для webpack
+  "awesomeTypescriptLoaderOptions": {
+    "forkChecker": true,
+    "useWebpackText": true,
+    "useCache": true
+  },
+  //нужно для AoT
+  "angularCompilerOptions": {
+    "genDir": ".",
+    "skipMetadataEmit" : true
+  }
+}
