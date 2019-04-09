@@ -1,36 +1,80 @@
 <!--D3.js JSON-->
 <!--<svg id="svg" version="1.1" width="100%" height="100%" viewBox="0 0 1280 720" preserveAspectRatio="xMidYMid"></svg>-->
 
+<!--место отображения содержимого-->
+<!--<div id="chart" align="center">-->
+<!--</div>-->
 
-<div id="chart" align="center">
+<!--<div id="chartDropdown" align="center"></div>-->
 
-    <!--<div id="chartDropdown" align="center"></div>-->
+<!--<mat-grid-list [cols]="breakpoint" rowHeight="2:0.5" (window:resize)="onResize($event)">-->
+<!--    <mat-grid-tile>1</mat-grid-tile>-->
+<!--    <mat-grid-tile>2</mat-grid-tile>-->
+<!--    <mat-grid-tile>3</mat-grid-tile>-->
+<!--    <mat-grid-tile>4</mat-grid-tile>-->
+<!--    <mat-grid-tile>5</mat-grid-tile>-->
+<!--    <mat-grid-tile>6</mat-grid-tile>-->
+<!--</mat-grid-list>-->
 
-<!---->
-<!--DROPDOWN-->
-<!--MENU-->
-<!---->
+<!--<span>Breakpoint: {{grid.cols}}</span>-->
+<!--<mat-grid-list #grid [cols]="4" rowHeight="2:1">-->
+<!--    <mat-grid-tile>1</mat-grid-tile>-->
+<!--    <mat-grid-tile>2</mat-grid-tile>-->
+<!--    <mat-grid-tile>3</mat-grid-tile>-->
+<!--    <mat-grid-tile>4</mat-grid-tile>-->
+<!--    <mat-grid-tile>5</mat-grid-tile>-->
+<!--    <mat-grid-tile>6</mat-grid-tile>-->
+<!--    <mat-grid-tile>7</mat-grid-tile>-->
+<!--    <mat-grid-tile>8</mat-grid-tile>-->
+<!--</mat-grid-list>-->
 
-    <mat-grid-tile-header>
-        <mat-form-field id="chartSelect">
-            <mat-select [(ngModel)]="selectedDefault">
-                <mat-option *ngFor="let option of chartCount" [value]="option.id">{{ option.name }}</mat-option>
-            </mat-select>
-        </mat-form-field>
-    </mat-grid-tile-header>
 
-    <!--<mat-grid-list cols="2" rowHeight="2:1">-->
-        <!--<mat-grid-tile>1</mat-grid-tile>-->
-        <!--<mat-grid-tile>2</mat-grid-tile>-->
-        <!--<mat-grid-tile>3</mat-grid-tile>-->
-        <!--<mat-grid-tile>4</mat-grid-tile>-->
-    <!--</mat-grid-list>-->
+<mat-expansion-panel hideToggle class="example-headers-align">
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            График
+        </mat-panel-title>
+        <mat-panel-description>
+            Выбрать нужный график для отображения
+            <mat-icon>timeline</mat-icon>
+        </mat-panel-description>
+    </mat-expansion-panel-header>
 
-    <!--<mat-grid-tile-footer>-->
+    <mat-button-toggle-group [(ngModel)]="activate">
+        <mat-button-toggle *ngFor="let opt of charts" [value]="opt"
+                           (change)="btnToggle($event.value)">
+            {{opt}}
+        </mat-button-toggle>
+    </mat-button-toggle-group>
 
-    <!--</mat-grid-tile-footer>-->
+    <mat-action-row>
+        <button mat-button color="white" (click)="oneCol()">Текущие графики в один столбец</button>
+        <button mat-button color="white" (click)="twoCol()">Текущие графики в два столбца</button>
+        <button mat-button color="white" (click)="clearScr()">Очистить экран</button>
+        <button mat-button color="white" (click)="clearSalary()">Удалить графики "Зарплата"</button>
+        <button mat-button color="white" (click)="clearWorkHours()">Удалить графики "Рабочие часы"</button>
+    </mat-action-row>
 
-</div>
+</mat-expansion-panel>
+
+<mat-grid-list cols="4" rowHeight="1:1" id="chartList">
+    <mat-grid-tile
+            *ngFor="let tile of tiles"
+            [colspan]="tile.cols"
+            [rowspan]="tile.rows"
+            [style.background]="tile.color">
+        {{tile.text}}
+    </mat-grid-tile>
+        <mat-grid-tile colspan = 2>
+            <div id="chart" align="center">
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile colspan = 2>
+            <div id="chart2" align="center">
+            </div>
+        </mat-grid-tile>
+</mat-grid-list>
+
 
 <!--<div id="chart2">-->
 <!---->
