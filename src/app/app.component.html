@@ -51,8 +51,8 @@
         <button mat-button color="white" (click)="oneCol()">Текущие графики в один столбец</button>
         <button mat-button color="white" (click)="twoCol()">Текущие графики в два столбца</button>
         <button mat-button color="white" (click)="clearScr()">Очистить экран</button>
-        <button mat-button color="white" (click)="clearSalary()">Удалить графики "Зарплата"</button>
-        <button mat-button color="white" (click)="clearWorkHours()">Удалить графики "Рабочие часы"</button>
+        <!--        <button mat-button color="white" (click)="clearSalary()">Удалить графики "Зарплата"</button>-->
+        <!--        <button mat-button color="white" (click)="clearWorkHours()">Удалить графики "Рабочие часы"</button>-->
     </mat-action-row>
 
 </mat-expansion-panel>
@@ -65,14 +65,14 @@
             [style.background]="tile.color">
         {{tile.text}}
     </mat-grid-tile>
-        <mat-grid-tile colspan = 2>
-            <div id="chart" align="center">
-            </div>
-        </mat-grid-tile>
-        <mat-grid-tile colspan = 2>
-            <div id="chart2" align="center">
-            </div>
-        </mat-grid-tile>
+    <mat-grid-tile colspan=2>
+        <div id="chart" align="center">
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile colspan=2>
+        <div id="chart2" align="center">
+        </div>
+    </mat-grid-tile>
 </mat-grid-list>
 
 

@@ -40,10 +40,6 @@
     bottom: 60px;
 }
 
-.mat-grid-tile {
-    /*background: lightblue;*/
-}
-
 .example-headers-align .mat-expansion-panel-header-title,
 .example-headers-align .mat-expansion-panel-header-description {
     flex-basis: 0;
